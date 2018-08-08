@@ -1,0 +1,17 @@
+{
+  "name": "feika",
+  "version": "0.1.0",
+  "description": "Mock data generator",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabianvelizok/feika.git"
+  },
+  "keywords": [
+    "mock",
+    "faker",
+    "data"
+  ],
+  "author": "velizfabianhoracio@gmail.com",
+  "license": "MIT"
+}
