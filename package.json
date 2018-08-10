@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "description": "Mock data generator",
   "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabianvelizok/feika.git"
+    "url": "git+https://github.com/fabianvelizok/feik.git"
   },
   "keywords": [
     "mock",
     "faker",
     "data"
   ],
-  "author": "velizfabianhoracio@gmail.com",
-  "license": "MIT"
+  "author": "Fabián Veliz <velizfabianhoracio@gmail.com> (https://twitter.com/fabianvelizok)",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
 }
