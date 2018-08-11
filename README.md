@@ -12,10 +12,10 @@ npm install feik
 
 ## Usage
 ```javascript
-import fk from 'feik';
+import Fk from 'feik';
 
 // Set locale
-const feik = new fk({
+const feik = new Fk({
   locale: 'es'
 });
 

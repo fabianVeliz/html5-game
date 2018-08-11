@@ -1,1 +1,3 @@
-// Make magic here.
+const feik = require('./lib');
+
+module.exports = feik;
