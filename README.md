@@ -33,6 +33,8 @@ const user = {
 
 // Get consistent results. Follow API path.
 feik.set('name.firstName', ['Mike', 'John', 'Paul']);
+// Clean and get original results.
+feik.set('name.firstName');
 
 // Compile
 feik.compile('{name.firstName}, {name.lastName}');
