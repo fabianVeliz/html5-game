@@ -14,32 +14,30 @@ npm install feik
 ```javascript
 import Fk from 'feik';
 
-// Set locale
+// Set locale - default (en)
 const feik = new Fk({
   locale: 'es'
 });
 
-// Set options to 'name' key
-feik.set('name', ['Mike', 'John', 'Paul']);
-
-// Generate a user with random (email and city).
+// Generate a user with random results.
 const user = {
-  name: feik.name(),
-  email: feik.email(),
-  city: feik.city()
+  name: feik.name.firstName(),
+  email: feik.internet.email(),
 };
 
 // {
 //   name: 'John',
 //   email: 'brian.riley@erich.br',
-//   city: 'New York'
 // }
 
-// Build your own key
+// Get consistent results. Follow API path.
+feik.set('name.firstName', ['Mike', 'John', 'Paul']);
+
+// Build your own key - It will be added to the 'custom' workspace.
 feik.build('point', () => {
   x: Math.random(),
   y: Math.random()
 });
 
-const point = feik.point();
+const point = feik.custom.point();
 ```
