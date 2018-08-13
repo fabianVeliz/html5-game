@@ -35,6 +35,8 @@ const user = {
 feik.set('name.firstName', ['Mike', 'John', 'Paul']);
 // Clean and get original results.
 feik.set('name.firstName');
+// or
+feik.clean('name.firstName');
 
 // Compile
 feik.compile('{name.firstName}, {name.lastName}');
