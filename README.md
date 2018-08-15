@@ -1,8 +1,8 @@
 # Feik
 
-Generate mock data easily
+Mock data generator
 
-## Instalation
+## Installation
 
 ```javascript
 yarn add feik
@@ -19,31 +19,32 @@ const feik = new Fk({
   locale: 'es'
 });
 
-// Generate a user with random results.
+// Generate a user with random props
 const user = {
-  name: feik.name.firstName(),
+  firstName: feik.name.firstName(),
+  lastName: feik.name.lastName(),
   email: feik.internet.email(),
 };
 
 // Output: ->
 // {
-//   name: 'Bert',
+//   firstName: 'Aaron',
+//   lastName: 'Johnston',
 //   email: 'example.org',
 // }
 
-// Get consistent results. Follow API path.
+// Get consistent results
 feik.set('name.firstName', ['Mike', 'John', 'Paul']);
-// Clean and get original results.
-feik.set('name.firstName');
-// or
-feik.clean('name.firstName');
+// Restore original results
+feik.restore('name.firstName');
+// Also, you could call the 'set' method without the 2nd param in order to restore original results.
+feik.set('name.firstName')
 
 // Compile
 feik.compile('{name.firstName}, {name.lastName}');
-// Output: ->
-// Bert, Batz
+// Output: -> Bert, Batz
 
-// Build your own key - It will be added to the 'custom' workspace.
+// Build your own key - It will be added to the 'custom' workspace
 feik.build('point', () => {
   x: Math.random(),
   y: Math.random()
