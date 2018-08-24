@@ -21,6 +21,10 @@ describe('Test API', function() {
     expect(this.feik.internet).to.be.a('object');
   });
 
+  it('Expect the feik instance has the "date" namespace', function() {
+    expect(this.feik.date).to.be.a('object');
+  });
+
   it('Expect the "name" namespace has the "firstName" method', function () {
     expect(this.feik.name.firstName).to.be.a('function');
   });
@@ -31,5 +35,13 @@ describe('Test API', function() {
 
   it('Expect the "internet" namespace has the "email" method', function () {
     expect(this.feik.internet.email).to.be.a('function');
+  });
+
+  it('Expect the "date" namespace has the "day" method', function () {
+    expect(this.feik.date.day).to.be.a('function');
+  });
+
+  it('Expect the "date" namespace has the "month" method', function () {
+    expect(this.feik.date.month).to.be.a('function');
   });
 });
