@@ -25,6 +25,10 @@ describe('Test API', function() {
     expect(this.feik.date).to.be.a('object');
   });
 
+  it('Expect the feik instance has the "address" namespace', function() {
+    expect(this.feik.address).to.be.a('object');
+  });
+
   it('Expect the "name" namespace has the "firstName" method', function () {
     expect(this.feik.name.firstName).to.be.a('function');
   });
@@ -43,5 +47,9 @@ describe('Test API', function() {
 
   it('Expect the "date" namespace has the "month" method', function () {
     expect(this.feik.date.month).to.be.a('function');
+  });
+
+  it('Expect the "address" namespace has the "country" method', function () {
+    expect(this.feik.address.country).to.be.a('function');
   });
 });
