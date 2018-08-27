@@ -52,3 +52,13 @@ feik.build('point', () => {
 
 const point = feik.custom.point();
 ```
+
+## Available methods
+```javascript
+feik.name.firstName() // Claire
+feik.name.lastName() // Hills
+feik.internet.email() // example.net
+feik.date.day() // Saturday
+feik.date.month() // June
+feik.address.country() // Australia
+```
